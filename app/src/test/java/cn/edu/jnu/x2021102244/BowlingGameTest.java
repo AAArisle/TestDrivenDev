@@ -48,4 +48,11 @@ public class BowlingGameTest extends TestCase {
             game.roll(0);
         assertEquals(35, game.score());
     }
+
+    @Test
+    public void test12Tens() {
+        for (int i=0; i<12; i++)
+            game.roll(10);
+        assertEquals(300, game.score());
+    }
 }
