@@ -37,4 +37,15 @@ public class BowlingGameTest extends TestCase {
             game.roll(0);
         assertEquals(12, game.score());
     }
+
+    @Test
+    public void test101011And14Zeros() {
+        game.roll(10);
+        game.roll(10);
+        game.roll(1);
+        game.roll(1);
+        for (int i=0; i<14; i++)
+            game.roll(0);
+        assertEquals(35, game.score());
+    }
 }
