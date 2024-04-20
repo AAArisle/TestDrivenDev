@@ -26,4 +26,15 @@ public class BowlingGameTest extends TestCase {
             game.roll(1);
         assertEquals(20, game.score());
     }
+
+    @Test
+    public void test2019And16Zeros() {
+        game.roll(2);
+        game.roll(0);
+        game.roll(1);
+        game.roll(9);
+        for (int i=0; i<16; i++)
+            game.roll(0);
+        assertEquals(12, game.score());
+    }
 }
